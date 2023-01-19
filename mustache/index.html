@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Vasiliy Zavoiko</title>
+</head>
+<body>
+	<style type="text/css">
+		img {
+		  display: block;
+		  position: absolute;
+			width: 50vw;
+			top:  40vh;
+			left: 25vw;
+		}
+
+		.tooltip .tooltiptext {
+			--tt_width: 60vw;
+			--border-w: 0.4vw;
+		  visibility: hidden;
+		  width: var(--tt_width);
+		  background-color: white;
+		  color: black;
+		  font-size: 5vw;
+		  text-align: center;
+		  padding: 5px 0;
+		  border: var(--border-w) solid;
+		  border-radius: 1.4vw;
+		  position: absolute;
+		  top: calc(35vh - 15vw);
+		  left: calc(50vw - var(--tt_width)/2 - var(--border-w));
+		  z-index: 1;
+		  opacity: 0;
+      transition: opacity 0.5s;
+		}
+
+		.tooltip:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		  animation: shake 1s;
+		  animation-iteration-count: infinite;
+		}
+
+		img:hover {
+			animation: shake 1.5s;
+		  animation-iteration-count: infinite;
+		}
+		@keyframes shake {
+		  0% { transform: translate(1px, 1px) rotate(0deg); }
+			10% { transform: translate(-1px, -2px) rotate(-1deg); }
+			20% { transform: translate(-3px, 0px) rotate(1deg); }
+		  30% { transform: translate(3px, 2px) rotate(0deg); }
+		  40% { transform: translate(1px, -1px) rotate(1deg); }
+		  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+		  60% { transform: translate(-3px, 1px) rotate(0deg); }
+		  70% { transform: translate(3px, 1px) rotate(-1deg); }
+		  80% { transform: translate(-1px, -1px) rotate(1deg); }
+		  90% { transform: translate(1px, 2px) rotate(0deg); }
+		  100% { transform: translate(1px, -2px) rotate(-1deg); }
+		}
+	</style>
+	<div class="tooltip"><span class="tooltiptext">Don't touch ma mustache!</span><img src="mustache.svg"></div>
+</body>
+</html>
